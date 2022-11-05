@@ -1,0 +1,17 @@
+CREATE TABLE Users (
+    UserName varchar(50) NOT NULL,
+    Email varchar(50),
+    Password varchar(50),
+    UserId INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY
+);
+
+INSERT INTO GroupA
+VALUES 
+(1, 1, 'Nexe', 2, 80, 44, 4),
+(2, 2, 'Varaždin', 2, 64, 58, 2),
+(3, 3, 'Dubrava', 2, 55, 55, 2),
+(4, 4, 'Kaštela', 2, 58, 59, 2),
+(5, 5, 'Rudar', 2, 54, 59, 2),
+(6, 6, 'Gorica', 2, 55, 66, 2),
+(7, 7, 'Metković', 2, 61, 75, 2),
+(8, 8, 'Zamet', 2, 62, 73, 0);
