@@ -8,6 +8,7 @@ const db = require('./db')
 const indexRouter = require('./routes/index.routes');
 const sqlInjectionRouter = require('./routes/sqlInjection.routes');
 const brokenAccessRouter = require('./routes/brokenAccess.routes');
+const adminPageRouter = require('./routes/adminPage.routes');
 
 const { pool } = require('./db');
 
@@ -22,6 +23,7 @@ app.use(bodyParser.json())
 app.use('/', indexRouter);
 app.use('/sqlinjection', sqlInjectionRouter);
 app.use('/brokenaccess', brokenAccessRouter);
+app.use('/brokenaccess/adminpage', adminPageRouter);
 
 const externalUrl = process.env.RENDER_EXTERNAL_URL;
 const port = externalUrl && process.env.PORT ? parseInt(process.env.PORT) : 8080;

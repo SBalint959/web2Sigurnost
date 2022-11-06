@@ -12,9 +12,9 @@ const { requiresAuth } = require('express-openid-connect');
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: '4ArGK9pV6XX1x2I0ap6zosH2rQEjbpFMyaxXVHlkhp9jMMIyh7M9qxubr54SUZJ5',
-  baseURL: 'https://web2projekt.onrender.com',
-  clientID: '9UNrlmRyzaM1Fitl3Y5Hb8OhDUaC4jD4',
+  secret: 'OiFYeQ5aWqu6JcCw8emrky0KUZiHe5umRFba4nueblszsSQqhqhue_5iL6Z8YWW_',
+  baseURL: 'http://localhost:8080',
+  clientID: 'np27BTsQ543kAdKVJC88ZBy5m8lEMG1Q',
   issuerBaseURL: 'https://dev-xxdzkni1.us.auth0.com'
 };
 
