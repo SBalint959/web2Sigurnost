@@ -18,9 +18,19 @@
          <button type="submit" class="button">Home</button>
       </form>
       <h2></h2>
-      <form method="get" action="/brokenaccess/adminpage" class="main-button">
-         <button type="submit" class="button">Admin Page</button>
-      </form>
+      <div>
+         <input type="checkbox" id="switch2" name ="" onclick="turnItOn2()">
+         <p id="message2">Unprotected</p>
+      </div>
+      <div>
+         
+         <% if (data.email == "naprwebadmin123@nrppw.hr") { %>
+            <a href="/brokenaccess/adminpage?user=admin"><button type="submit" class="button">Admin Page</button></a>  
+         <% } else { %>
+            <a href="/brokenaccess/adminpage?user=user"><button type="submit" class="button">Admin Page</button></a>   
+
+         <% } %>
+      </div>
       <h2></h2>
       <div class="profile-display">
          <ul>
@@ -33,5 +43,8 @@
          </ul>
      </div>
    </div>
+
+   <script src="./scripts/main.js"></script>
+   <script src="./routes/adminPage.routes.js"></script>
 </body>
 </html>

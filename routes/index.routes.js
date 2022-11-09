@@ -4,7 +4,6 @@ const { auth } = require('express-openid-connect');
 const db = require('../db');
 const app = express();
 const fs = require('fs');
-const { Parser } = require('json2csv');
 
 
 const { requiresAuth } = require('express-openid-connect');

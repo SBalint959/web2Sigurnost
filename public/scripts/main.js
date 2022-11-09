@@ -1,4 +1,7 @@
+const { default: axios } = require("axios");
+
 let protection = "OFF"
+let protection2 = "OFF"
 
 function funPretraga(){
    for (let i = 0; i < 6; i++) {
@@ -46,4 +49,20 @@ function turnItOn() {
       protection = "OFF"
    }
 }
+function turnItOn2() {
+   if(document.getElementById("switch2").checked) {
+      document.getElementById("message2").textContent = "Protected"
+      protection = "ON"
+   }
+   else {
+      document.getElementById("message2").textContent = "Unprotected"
+      protection = "OFF"
+   }
+}
 
+
+function funQuery(email) {
+   if (protection == "ON") {
+      axios.posst(window.location.protocol + "/brokenaccess/adminpage")
+   }
+}
