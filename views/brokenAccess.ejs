@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Premijer liga 22/23</title>
+    <title>Broken access</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Sven Balint" />
@@ -14,6 +14,14 @@
          <button type="submit" class="button login-buttons">Odjava</button>
       </form>
       <h1>Broken Access</h1>
+      <div>
+         <h3>Dok je aplikacija nezaštićena, "tajnoj" admin stranici se pristup gleda pute query-a u adresi.</h3>
+         <h3>Tada je kao napadaču moguća promijena usera iz "user" u "admin" kako bi joj se pristupilo.</h3>
+         <h3>A dok je stranica zaštićena user se provjerava na backendu uz pomoć auth0 podataka i time utvrđuje vjerodostojnost.</h3>
+         <h3>Ne prijavljenom korisniku nije ni moguć pristup Broken Access stranici, ali ako unese adresu nezaštićene stranice može ju vidjeti.</h3>
+         <h3>Razlikuju se dvije različite stranice, adminPage i adminPageProtected i ovisno o tome što je označeno u checkboxu</h3>
+         <h3>korisnika se vodi određenu stranicu</h3>
+     </div>
       <form method="get" action="/" class="main-button">
          <button type="submit" class="button">Home</button>
       </form>
@@ -25,9 +33,9 @@
       <div>
          
          <% if (data.email == "naprwebadmin123@nrppw.hr") { %>
-            <a href="/brokenaccess/adminpage?user=admin"><button type="submit" class="button">Admin Page</button></a>  
+            <a id ="link-button" href="/brokenaccess/adminpage?user=admin" ><button type="submit" class="button">Admin Page</button></a>  
          <% } else { %>
-            <a href="/brokenaccess/adminpage?user=user"><button type="submit" class="button">Admin Page</button></a>   
+            <a id = "link-button-user" href="/brokenaccess/adminpage?user=user" ><button type="submit" class="button">Admin Page</button></a>   
 
          <% } %>
       </div>
@@ -45,6 +53,5 @@
    </div>
 
    <script src="./scripts/main.js"></script>
-   <script src="./routes/adminPage.routes.js"></script>
 </body>
 </html>
